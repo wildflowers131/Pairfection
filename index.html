@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Food Videos with Wine Pairing</title>
+    <link rel="stylesheet" href="style3.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><span class = "bigger">Pairfection:</span> Plan the Perfect Meal and Pair it with the Perfect Wine</h1>
+        </header>
+
+        <div id = "search">
+            <form id="js-form">
+                <label for="js-search-food">Enter Food Keyword</label>
+                <input type="text" name="query" id="js-search-food">
+                <br>
+                <label for="js-number">Number of Results to Return (between 1 - 100)</label>
+                <input type="number" name="number" id="js-number" value = "10">
+                <br>
+                <input type="submit" value="Submit" class = "btn">
+            </form>
+        </div>
+
+        <section id="recipes-results" class="hidden">
+            <h2>Recipes Videos</h2>
+            <br>
+            <div id="recipes-list">
+            </div>
+            <p id="js-recipes-error-message" class="error-message"></p>
+        </section>
+        
+
+        <section id="wines-results" class="hidden">
+                <div class = "wines">
+                    <h2>The Perfect Wine</h2>
+                    <br>
+                    <div id="wines-pairs">
+                    </div>
+                    <div id="wines-display">
+                    </div>
+                    <p id="js-wines-error-message" class="error-message"></p>
+                </div>
+        </section>
+
+        <footer>
+            <p>NW &copy; 2019</p>
+        </footer>
+    </div>
+    <script src="recipeSearch.js"></script> 
+    <script src="winePairing.js"></script>
+</body>
+</html>

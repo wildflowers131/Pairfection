@@ -10,6 +10,7 @@ function formatQueryParams(params) {
 }
 
 function displayRecipesResults(responseJson, query, number) {
+  document.getElementById('recipes-results').scrollIntoView();
   // if there are previous results, remove them
   $('#recipes-list').empty();
   if ((responseJson.videos === undefined) ||(responseJson.videos.length == 0)){
@@ -64,6 +65,7 @@ function watchForm() {
     event.preventDefault();
     const query = $('#js-search-food').val().toLowerCase();
     const number = $('#js-number').val();
+    $('#recipes-list').empty();
     getRecipes(query, number);
   });
 }

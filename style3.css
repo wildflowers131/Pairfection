@@ -29,8 +29,8 @@ body {
     border: 0;
 }
 
-.btn :active{
-    background: #b3b69c;
+.btn:active{
+    background: #9aaf4a;
 }
 
 img {
@@ -45,6 +45,7 @@ img {
 
 .bigger {
     font-size: 2.5rem;
+    color: #d85f64;
 }
 
 header h1{
@@ -57,13 +58,6 @@ header h1{
 header {
     min-height: 40px;
 }
-
-/* #search{
-    display: grid;
-    grid-template-areas: 
-        'js-form js-form'
-        'js-form js-form';
-} */
 
 #js-form {
     grid-area: js-form;
@@ -131,59 +125,15 @@ h2 {
 
 footer {
     background: var(--primary);
-    min-height: 20px;
+    min-height: 40px;
 }
 
-footer p {
-    color: #fff;
-    font-size: 1rem;
-    font-weight: bold;
-    text-align: center;
-}
+/*media query for ipad pro */
 
-@media screen and (min-width: 600px) and (max-width: 1025px){
- header {
-    min-height: 80px;
- }
-
- #js-form {
-    min-height: 800px;
- }
-
- footer {
-    min-height: 60px;
- }
-
-}
-
-@media screen and (min-width: 1026px) and (max-width: 1920px){
-header {
-    min-height: 120px;
-    margin-top: 20px;
- }
-
- header h1 {
-    font-size: 2.0rem;
- }
-
- .bigger {
-     font-size: 3.5rem;
- }
-
- #js-form {
-    min-height: 1000px;
- }
-
- #js-form label {
-    font-size: 2.5rem;
- }
- footer {
-    min-height: 80px;
- }
-
-}
-
-@media only screen and (min-device-width: 1024px) and (orientation: portrait){
+@media only screen 
+  and (min-width: 1024px) 
+  and (max-height: 1366px) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
     header {
         min-height: 150px;
         margin-top: 30px;
@@ -201,16 +151,24 @@ header {
         min-height: 1050px;
      }
     
+     #js-form label {
+        font-size: 2.0rem;
+    }
+    
      footer {
         min-height: 80px;
      }
-    
 }
 
-@media only screen and (min-device-width: 1200px) and (orientation: portrait){
+/*media query for ipad portrait*/
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1023px) {
+
     header {
-        min-height: 270px;
-        margin-top: 80px;
+        min-height: 150px;
+        margin-top: 30px;
      }
     
      header h1 {
@@ -222,16 +180,213 @@ header {
      }
     
      #js-form {
-        min-height: 1300px;
-     }
-
-     #js-form label {
-        font-size: 3.0rem;
-     }
-     
-     footer {
-        min-height: 100px;
+        min-height: 570px;
      }
     
+     #js-form label {
+        font-size: 2.0rem;
+    }
+    
+     footer {
+        min-height: 80px;
+     }
+ }
+
+ /*ipad landscape */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+    #js-form {
+        min-height: 450px;
+     }
 }
 
+ /* iphone X, iphone 6/7/8 plus */
+ @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3)and (orientation: landscape) {
+    header {
+        min-height: 50px;
+        margin-top: 10px;
+     }
+    
+     header h1 {
+        font-size: 1.2rem;
+     }
+    
+     .bigger {
+         font-size: 2.0rem;
+     }
+    
+     #js-form {
+        min-height: 200px;
+     }
+    
+     #js-form label {
+        font-size: 1.0rem;
+    }
+    
+     footer {
+        min-height: 40px;
+     }
+}
+
+/*iphone 6/7/8*/
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) 
+and (orientation : landscape) { 
+    header {
+        min-height: 40px;
+        margin-top: 10px;
+     }
+    
+     header h1 {
+        font-size: 1.2rem;
+     }
+    
+     .bigger {
+         font-size: 2.0rem;
+     }
+    
+     #js-form {
+        min-height: 220px;
+     }
+    
+     #js-form label {
+        font-size: 1.0rem;
+    }
+    
+     footer {
+        min-height: 40px;
+     }
+}
+
+/*pixel 2, pixel 2 xl, galaxy s5 */
+
+@media only screen 
+and (min-device-width : 360px) 
+and (max-device-width : 823px) 
+and (orientation : landscape) { 
+    header {
+        min-height: 40px;
+        margin-top: 10px;
+     }
+    
+     header h1 {
+        font-size: 1.2rem;
+     }
+    
+     .bigger {
+         font-size: 2.0rem;
+     }
+    
+     #js-form {
+        min-height: 220px;
+     }
+    
+     #js-form label {
+        font-size: 1.0rem;
+    }
+    
+     footer {
+        min-height: 40px;
+     }
+}
+
+/*Blackberry portrait*/
+
+@media only screen 
+and (min-device-width : 600px) 
+and (max-device-width : 1023px) 
+and (orientation : portrait) { 
+    header {
+        min-height: 70px;
+        margin-top: 20px;
+     }
+    
+     header h1 {
+        font-size: 1.8rem;
+        line-height: 3.0 rem;
+     }
+    
+     .bigger {
+         font-size: 2.3rem;
+     }
+    
+     #js-form {
+        min-height: 700px;
+     }
+    
+     #js-form label {
+        font-size: 1.0rem;
+    }
+    
+     footer {
+        min-height: 50px;
+     }
+}
+
+/*desktop portrait*/
+@media only screen 
+and (min-device-width : 1200px) 
+and (max-device-width : 1919px)
+and (orientation: portrait) { 
+    header {
+        min-height: 100px;
+        margin-top: 50px;
+     }
+    
+     header h1 {
+        font-size: 2.5rem;
+        line-height: 1.5;
+     }
+    
+     .bigger {
+         font-size: 3.5rem;
+     }
+    
+     #js-form {
+        min-height: 1500px;
+     }
+    
+     #js-form label {
+        font-size: 2.0rem;
+    }
+    
+     footer {
+        min-height: 70px;
+     }
+}
+
+/*desktop landscape*/
+
+@media only screen 
+and (min-device-width : 1920px) 
+and (max-device-width : 2200px)
+and (orientation: landscape) { 
+    header {
+        min-height: 100px;
+        margin-top: 50px;
+     }
+    
+     header h1 {
+        font-size: 3.0rem;
+        line-height: 1.5;
+     }
+    
+     .bigger {
+         font-size: 4.5rem;
+     }
+    
+     #js-form {
+        min-height: 1000px;
+     }
+    
+     #js-form label {
+        font-size: 2.5rem;
+    }
+    
+     footer {
+        min-height: 70px;
+     }
+}
